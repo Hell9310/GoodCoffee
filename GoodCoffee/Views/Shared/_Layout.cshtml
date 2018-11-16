@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title GoodCoffee</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body background="imagen/888.jpg">
+    <div class="navbar navbar-default navbar-fixed-top" id="RedMenu">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNavBar" style="background-color:#000">
+                    <span class="icon-bar" style="background-color:#ffffff"></span>
+                    <span class="icon-bar" style="background-color:#ffffff"></span>
+                    <span class="icon-bar" style="background-color:#ffffff"></span>
+                </button>
+                <a class="icon-bar"><img src="~/imagen/kisspng.png" HSPACE="25" VSPACE="3" /></a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="MainNavBar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Home", "Inicio", "GALERIAs", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Coffees", "Index", "GALERIAs", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("About us", "Nosotros", "GALERIAs", null, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Jan Michael Sanchez Sierra</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

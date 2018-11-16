@@ -1,0 +1,39 @@
+﻿@model IEnumerable<GoodCoffee.Models.GALERIA>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading" align="center">@item.NOMBRE</div>
+                    <br />
+                    <img class="panel img-responsive" src="@item.IMAGEN" />
+                    <div class="panel-body">
+
+                        <p>@Html.DisplayName("Variedad: ")@item.VARIEDAD</p>
+                        <p>@Html.DisplayName("País: ")@item.PAIS</p>
+                        <p>@Html.DisplayName("Our Score: ")@item.OURSCORE</p>
+                        <p>@Html.DisplayName("Farm: ")@item.FARM</p>
+                        <p>
+                            @Html.ActionLink("Cosecha", "Details", new { id = item.ID })
+                            <button type="button" class="btn btn-outline-danger" href="#">Compra</button>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.ID })
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

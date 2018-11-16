@@ -1,0 +1,28 @@
+﻿@model GoodCoffee.Models.GALERIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Html.DisplayFor(model => model.NOMBRE)</div>
+            <div class="panel-body">
+                <img class="img-responsive" src="@Html.DisplayFor(model => model.IMAGEN)" />
+                <p>@Html.DisplayFor(model => model.VARIEDAD)</p>
+                <p>@Html.DisplayFor(model => model.PAIS)</p>
+                <p>@Html.DisplayFor(model => model.OURSCORE)</p>
+                <p>@Html.DisplayFor(model => model.FARM)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Atras", "Index")
+</p>
